@@ -21,7 +21,7 @@ def run(project, bucket):
                     )
                     
         (input_pc
-         |'GCS_Write' >> beam.io.WriteToText(flights_output)
+         |'GCS_Write' >> beam.io.WriteToText(file_out1)
          )
          
         BQ_table_Schema = ','.join(['AtomicNumber:numeric','Element:string','Symbol:string','AtomicMass:float','NumberofNeutrons:numeric','NumberofProtons:numeric','NumberofElectrons:numeric',
@@ -46,6 +46,8 @@ if __name__ == '__main__':
 
     args = vars(parser.parse_args())
 
-    print("No Syntax errors in code")
+    print("Dataflow Runner is Starting")
 
     run(project=args['project'], bucket=args['bucket'])
+    
+        print("Dataflow Runner completed")
