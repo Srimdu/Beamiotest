@@ -50,4 +50,4 @@ if __name__ == '__main__':
 
     run(project=args['project'], bucket=args['bucket'])
     
-        print("Dataflow Runner completed")
+    print("Dataflow Runner completed")
