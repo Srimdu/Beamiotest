@@ -46,6 +46,6 @@ if __name__ == '__main__':
 
     args = vars(parser.parse_args())
 
-    print("You will see this message if everything is working smooth")
+    print("No Syntax errors in code")
 
     run(project=args['project'], bucket=args['bucket'])
