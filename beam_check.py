@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import apache_beam as beam
 
 def run(project, bucket):
